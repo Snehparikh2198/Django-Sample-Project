@@ -1,0 +1,250 @@
+{% extends 'base.html' %}
+{% block title %}Service
+{% endblock title %}
+{% block body %}
+<body class="bg-light">
+ <form method="post" action="/Service" >
+{% csrf_token %}
+    <div class="container">
+      <div class="py-5 text-center">
+       
+       
+           </div>
+
+      <div class="row">
+     
+        <div class="col-md-4 order-md-2 mb-4">
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted">Your cart</span>
+            <span class="badge badge-secondary badge-pill">3</span>
+          </h4>
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Product name</h6>
+                <small class="text-muted">Brief description</small>
+              </div>
+              <span class="text-muted">$12</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Second product</h6>
+                <small class="text-muted">Brief description</small>
+              </div>
+              <span class="text-muted">$8</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Third item</h6>
+                <small class="text-muted">Brief description</small>
+              </div>
+              <span class="text-muted">$5</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between bg-light">
+              <div class="text-success">
+                <h6 class="my-0">Promo code</h6>
+                <small>EXAMPLECODE</small>
+              </div>
+              <span class="text-success">-$5</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <span>Total (USD)</span>
+              <strong>$20</strong>
+            </li>
+          </ul>
+
+          <form class="card p-2">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Promo code">
+              <div class="input-group-append">
+                <button type="submit" class="btn btn-secondary">Redeem</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-8 order-md-1">
+          <h4 class="mb-3">Create New Project</h4>
+          <form class="needs-validation" novalidate="">
+            <div class="mb-3">
+              <label for="projectname">Proect Name </label>
+              <input type="projectname" class="form-control" id="projectname" placeholder="Enter Your Project name">
+              <div class="invalid-feedback">
+                Create Your New Project.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="call_ingestion_platform">Call Ingestion platform</label>
+              <div class="input-group">
+                
+                <input type="text" class="form-control" id="call_ingestion_platform" name="call_ingestion_platform" placeholder="" required="">
+                <div class="invalid-feedback" style="width: 100%;">
+                 Call Ingestion platform.
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="API_user">API user </label>
+              <div class="input-group">
+                
+                <input type="text" class="form-control" id="API_user" name="API_user" placeholder="" required="">
+                <div class="invalid-feedback" style="width: 100%;">
+                  API user.
+                </div>
+              </div>
+            </div>
+
+
+            <div class="mb-3">
+              <label for="Audio_Format">Audio Format </label>
+              <div class="input-group">
+                
+                <input type="text" class="form-control" id="Audio_Format" name="Audio Format" placeholder="" required="">
+                <div class="invalid-feedback" style="width: 100%;">
+                 Audio Format.
+                </div>
+              </div>
+            </div>
+
+           
+            <div class="mb-3">
+              <label for="Customer_Channel">Customer Channel</label>
+              <div class="input-group">
+                
+                <input type="text" class="form-control" id="Customer_Channel" name="Customer_Channel" placeholder="" required="">
+                <div class="invalid-feedback" style="width: 100%;">
+                 Customer Channel.
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="mb-3">
+              <label for="Agent_channel">Agent Channel</label>
+              <div class="input-group">
+                
+                <input type="text" class="form-control" id="Agent_channel" name="Agent_channel" placeholder="" required="">
+                <div class="invalid-feedback" style="width: 100%;">
+                 Customer Channel.
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-5 mb-3">
+                <label for="Assign QA">Assign QA</label>
+                <select class="custom-select d-block w-100" id="Assign_QA" name ="Assign_QA"required="">
+                  <option value="">Ashish bamaniya</option>
+                  <option value="">TestQA</option>
+                  <option value="">TestQA1 TestQA2</option>
+                  <option value="">TestQA1 TestQA2</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a Assign QA.
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="Choosen QA">Choosen QA</label>
+                <select class="custom-select d-block w-100" id="Choosen_QA" name="choosen_QA"required="">
+                  <option value="">Choose...</option>
+                  <option></option>
+                </select>
+                <div class="invalid-feedback">
+                  Please provide a Choosen QA.
+                </div>
+              </div>
+              
+            
+            <div class="mb-3">
+              <label for="Date and Time Formate">Date and Time Formate</label>
+              <div class="input-group">
+                
+                <input type="Date" class="form-control" id="Date_time" name="Date_time" placeholder="" required="">
+                <div class="invalid-feedback" style="width: 100%;">
+                 Date_time.
+                </div>
+              </div>
+            </div>
+
+
+           <div class="mb-3">
+              <label for="Timezone">Timezone</label>
+              <div class="input-group">
+                
+                <input type="Date" class="form-control" id="Timezone" name="TimeZone" placeholder="" required="">
+                <div class="invalid-feedback" style="width: 100%;">
+                 Timezone.
+                </div>
+              </div>
+            </div>
+
+          <div class="mb-3">
+              <label for="Comment">Comment</label>
+              <div class="input-group">
+                
+                <input type="text" class="form-control" id="Comment" name="Comment" placeholder="" required="">
+                <div class="invalid-feedback" style="width: 100%;">
+                 Comment.
+                </div>
+              </div>
+            </div>
+
+
+            </div>
+            
+            <button class="btn btn-primary " type="submit">Save</button>
+            <button class="btn btn-primary " type="submit">Cancel</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
+  
+
+<div id="fatkun-drop-panel">
+        <a id="fatkun-drop-panel-close-btn">×</a>
+            <div id="fatkun-drop-panel-inner">
+                <div class="fatkun-content">
+                    <svg class="fatkun-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5892"><path d="M494.933333 782.933333c2.133333 2.133333 4.266667 4.266667 8.533334 6.4h8.533333c6.4 0 10.666667-2.133333 14.933333-6.4l2.133334-2.133333 275.2-275.2c8.533333-8.533333 8.533333-21.333333 0-29.866667-8.533333-8.533333-21.333333-8.533333-29.866667 0L533.333333 716.8V128c0-12.8-8.533333-21.333333-21.333333-21.333333s-21.333333 8.533333-21.333333 21.333333v588.8L249.6 475.733333c-8.533333-8.533333-21.333333-8.533333-29.866667 0-8.533333 8.533333-8.533333 21.333333 0 29.866667l275.2 277.333333zM853.333333 874.666667H172.8c-12.8 0-21.333333 8.533333-21.333333 21.333333s8.533333 21.333333 21.333333 21.333333H853.333333c12.8 0 21.333333-8.533333 21.333334-21.333333s-10.666667-21.333333-21.333334-21.333333z" p-id="5893"></path></svg>
+                    <div class="fatkun-title">Drag and Drop</div>
+                    <div class="fatkun-desc">The image will be downloaded</div>
+                </div>
+            </div>
+    </div>
+    
+    </form>
+    </body>
+{% endblock body %}
+
